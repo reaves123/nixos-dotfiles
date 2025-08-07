@@ -30,7 +30,14 @@ in
     curl
     lazygit
     tealdeer
+    tree
    ];
 
    networking.networkmanager.enable = true;
+   networking.firewall.enable = true;
+
+   services.openssh.enable = true;
+
+   nix.settings.experimental-features = ["nix-command" "flakes"];
+
 }
